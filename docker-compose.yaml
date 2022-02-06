@@ -17,8 +17,6 @@ services:
       - infra_chatbot
     env_file:
       - .env
-    ports:
-      - 2291:80
     volumes:
       - ./onlyoffice/data:/var/www/onlyoffice/Data
       - ./onlyoffice/lib:/var/lib/onlyoffice
