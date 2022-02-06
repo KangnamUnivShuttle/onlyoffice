@@ -9,8 +9,6 @@ services:
         resources:
             limits:
               memory: 2048M
-    networks:
-      - infra_chatbot
     env_file:
       - .env
     volumes:
