@@ -6,7 +6,7 @@ networks:
     
 services:
   onlyoffice-documentserver:
-    image: onlyoffice/documentserver:latest
+    image: onlyoffice/documentserver:7.0.0.132
     container_name: kwsnet-onlyoffice
     restart: always
     deploy:
