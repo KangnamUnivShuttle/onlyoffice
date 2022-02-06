@@ -1,0 +1,24 @@
+version: '3'
+
+networks:
+  oracle_net:
+    external: true
+    
+services:
+  onlyoffice-documentserver:
+    image: onlyoffice/documentserver:latest
+    container_name: kwsnet-onlyoffice
+    restart: always
+    deploy:
+        resources:
+            limits:
+              memory: 2048M
+    networks:
+      - oracle_net
+    env_file:
+      - .env
+    volumes:
+      - ./onlyoffice/data:/var/www/onlyoffice/Data
+      - ./onlyoffice/lib:/var/lib/onlyoffice
+      - ./onlyoffice/logs:/var/log/onlyoffice
+      - ./onlyoffice/db:/var/lib/postgresql
