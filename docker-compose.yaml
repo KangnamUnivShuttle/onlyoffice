@@ -1,13 +1,9 @@
 version: '3'
 
-networks:
-  infra_chatbot:
-    external: true
-    
 services:
   onlyoffice-documentserver:
     image: onlyoffice/documentserver:latest
-    container_name: kwsnet-onlyoffice
+    container_name: container-onlyoffice
     restart: always
     deploy:
         resources:
