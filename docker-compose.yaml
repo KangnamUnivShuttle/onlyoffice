@@ -1,0 +1,14 @@
+version: '3'
+services:
+  onlyoffice-documentserver:
+    image: onlyoffice/documentserver:latest
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - 2291:80
+    volumes:
+      - ./onlyoffice/data:/var/www/onlyoffice/Data
+      - ./onlyoffice/lib:/var/lib/onlyoffice
+      - ./onlyoffice/logs:/var/log/onlyoffice
+      - ./onlyoffice/db:/var/lib/postgresql
