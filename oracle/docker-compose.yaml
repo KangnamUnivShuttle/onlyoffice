@@ -1,7 +1,7 @@
 version: '3'
 
 networks:
-  oracle_net:
+  oracle_oraclenet:
     external: true
     
 services:
@@ -14,7 +14,7 @@ services:
             limits:
               memory: 2048M
     networks:
-      - oracle_net
+      - oracle_oraclenet
     env_file:
       - .env
     volumes:
